@@ -3,5 +3,5 @@ scikit-learn
 feature-engine
 flask
 flask-wtf
-gunicorn
+gunicorn == 23.0.0
 numpy
