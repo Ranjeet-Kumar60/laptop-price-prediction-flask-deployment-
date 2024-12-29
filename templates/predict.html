@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        <!-- Render CSRF Token Once -->
+        {{ form.hidden_tag() }}
+        
+        <!-- Dynamically Render Form Fields (Excluding SubmitField) -->
+        {% for field in form %}
+            {% if field.type != "SubmitField" %}
+            <div>
+                {{ field.label }} <br>
+                {{ field() }}
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                        <div style="color: red;">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            {% endif %}
+        {% endfor %}
+        
+        <!-- Submit button -->
+        <button type="submit">Predict</button>
+    </form>
+
+    <!-- Display Prediction -->
+    {% if prediction %}
+        <h3 style="color: green; margin-top: 20px;">{{ prediction }}</h3>
+    {% endif %}
+{% endblock %}

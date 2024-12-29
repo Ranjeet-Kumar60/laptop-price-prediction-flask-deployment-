@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h3>Welcome to the Laptop Price Prediction Model</h3>
+    <p>Click below to predict the price of a laptop:</p>
+    <a href="{{ url_for('predict') }}">Predict Laptop Price</a>
+</div>
+{% endblock %}
