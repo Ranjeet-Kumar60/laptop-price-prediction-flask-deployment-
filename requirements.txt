@@ -5,3 +5,4 @@ flask
 flask-wtf
 gunicorn == 23.0.0
 numpy
+xgboost
