@@ -1,8 +1,8 @@
-pandas
-scikit-learn==1.2.2
-feature-engine
-flask
-flask-wtf
+pandas == 1.5.3
+scikit-learn == 1.6.0
+feature-engine == 1.6.2
+flask == 2.2.2
+flask-wtf == 1.2.1
 gunicorn == 23.0.0
-numpy
-xgboost
+numpy == 1.26.4
+xgboost == 2.0.3
